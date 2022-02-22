@@ -1,7 +1,9 @@
-from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
-# FUNCTION THAT GET ALL ROUTES 
 
+# FUNCTION THAT GET ALL ROUTES FROM API
+@api_view(['GET'])
 def getRoutes(request):
     # DEFINING API ROUTES 
     routes =[
@@ -34,4 +36,4 @@ def getRoutes(request):
             'description':'Deletes an existing note'
         },
     ]
-    return JsonResponse(routes, safe=False)
+    return Response(routes)

@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-getNotefrom .serializers import NoteSerializer
+from .serializers import NoteSerializer
 from .models import Note
 
 
